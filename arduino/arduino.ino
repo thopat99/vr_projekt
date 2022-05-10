@@ -40,6 +40,7 @@ void loop() {
   // Braccio.ServoMovement(20,         90, 90, 90, 90, 90,  73);
 
   // Notation: m(xx,xxx,xxx,xxx,xxx,xxx,xx)
+  // Beispiel: m(20,090,090,090,090,090,10)
 
   if(Serial.available()) {
     command = Serial.readStringUntil('\n');
