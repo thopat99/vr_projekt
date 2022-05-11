@@ -1,4 +1,4 @@
-from simple-websocket-server import WebSocketServer, WebSocket
+from simple_websocket_server import WebSocketServer, WebSocket
 import serial
 
 class ControlRobot(WebSocket):
