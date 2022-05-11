@@ -4,7 +4,7 @@ import serial
 class ControlRobot(WebSocket):
 	def handle(self):
 		print(self.data)
-		#ser.write(bytes(command, 'utf-8'))
+		ser.write(bytes(self.data, 'utf-8'))
 
 	def connected(self):
 		ser.write(b"neutral")

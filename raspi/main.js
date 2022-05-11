@@ -1,4 +1,4 @@
-let socket = new WebSocket("ws://192.168.3.14");
+let socket = new WebSocket("ws://192.168.3.14:8000");
 
 socket.onopen = (e) => {
     alert("Established Connection to RasPi");
