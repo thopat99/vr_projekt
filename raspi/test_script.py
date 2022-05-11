@@ -6,4 +6,5 @@ if __name__ == '__main__':
 
 	while True:
 		command = input("Please enter the command: ")
+		command += "\n"
 		ser.write(bytes(command, 'utf-8'))
