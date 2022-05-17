@@ -1,7 +1,7 @@
 let socket = new WebSocket("ws://192.168.3.14:8000");
 
 socket.onopen = (e) => {
-    alert("Established Connection to RasPi");
+    console.log("Established Connection to RasPi");
 }
 
 socket.onerror = (e) => {
@@ -32,6 +32,14 @@ function send_data() {
 
 function start_position() {
     socket.send("neutral");
+}
+
+function resting_position() {
+    socket.send("m(20,090,090,030,000,090,73)");
+    setTimeout( () => {
+        socket.send("m(20,090,090,010,000,090,73)");
+    }, 2000);
+    
 }
 
 function pad(num, size) {
