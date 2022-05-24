@@ -37,7 +37,7 @@ function start_position() {
 function resting_position() {
     socket.send("m(20,090,090,030,000,090,73)");
     setTimeout( () => {
-        socket.send("m(20,090,090,010,000,090,73)");
+        socket.send("m(20,090,090,000,000,090,73)");
     }, 2000);
     
 }
@@ -49,3 +49,15 @@ function pad(num, size) {
     } 
     return num;
 }
+
+document.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+        send_data();
+    }
+    if (event.key === 's') {
+        start_position();
+    }
+    if (event.key === 'r') {
+        resting_position();
+    }
+});
