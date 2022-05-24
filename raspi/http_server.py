@@ -19,7 +19,7 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             command += params[0]
             command += ","
 
-            for param in params[1:5]:
+            for param in params[1:6]:
                 command += param.zfill(3)
                 command += ","
 
