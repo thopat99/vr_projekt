@@ -4,7 +4,7 @@ from urllib.parse import parse_qs, urlparse
 hostName = '0.0.0.0'
 serverPort = 4200
 
-class HTTPServer(BaseHTTPRequestHandler):
+class VRHTTPServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
 
@@ -16,7 +16,7 @@ class HTTPServer(BaseHTTPRequestHandler):
         return
 
 if __name__ == "__main__":
-    webServer = HTTPServer(hostName, serverPort, HTTPServer)
+    webServer = HTTPServer((hostName, serverPort), VRHTTPServer)
 
     print("Server started http://%s:%s" % (hostName, serverPort))
 
