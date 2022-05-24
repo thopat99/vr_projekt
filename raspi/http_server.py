@@ -16,8 +16,8 @@ class HTTPServer(BaseHTTPRequestHandler):
         return
 
 if __name__ == "__main__":
-    webServer = HTTPServer((hostName, serverPort), HTTPServer)
-    
+    webServer = HTTPServer(hostName, serverPort, HTTPServer)
+
     print("Server started http://%s:%s" % (hostName, serverPort))
 
     try:
