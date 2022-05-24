@@ -13,7 +13,7 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             message = parse_qs(urlparse(self.path).query).get('command', None)[0]
             print("Message: " + message)
 
-            if message is "neutral":
+            if message == "neutral":
                 ser.write(b"neutral")
                 command = "neutral"
 
