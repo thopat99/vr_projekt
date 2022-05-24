@@ -13,15 +13,29 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             message = parse_qs(urlparse(self.path).query).get('command', None)[0]
             print(message)
 
+
+            params = message.split(",")
+            command = "m("
+            command += params[0]
+            command += ","
+
+            for param in params[1:5]:
+                command += param.zfill(3)
+                command += ","
+
+            command += params[6]
+            command += ")"
+
+
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
 
-            json_string = {'command' : message}
+            json_string = {'command' : command}
 
             self.wfile.write(json.dumps(json_string).encode(encoding='utf-8'))
             
-            ser.write(bytes(message, 'utf-8'))
+            # ser.write(bytes(message, 'utf-8'))
 
         return
 
