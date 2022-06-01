@@ -35,9 +35,9 @@ function start_position() {
 }
 
 function resting_position() {
-    socket.send("m(20,090,090,030,000,090,73)");
+    socket.send("m(20,000,090,030,000,090,73)");
     setTimeout( () => {
-        socket.send("m(20,090,090,000,000,090,73)");
+        socket.send("m(20,000,090,000,000,090,73)");
     }, 2000);
     
 }
