@@ -28,7 +28,7 @@ class VRHTTPServer(BaseHTTPRequestHandler):
                     command += ","
 
                 command += params[6]
-                command += ")"
+                command += ")\n"
 
                 print("Command: " + command)
 
