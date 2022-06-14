@@ -44,6 +44,8 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             
             ser.write(bytes(command, 'utf-8'))
 
+            print(ser.read())
+
         return
 
 if __name__ == "__main__":
