@@ -44,7 +44,7 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             
             ser.write(bytes(command, 'utf-8'))
 
-            print(ser.read())
+            print(ser.readline())
 
         return
 
