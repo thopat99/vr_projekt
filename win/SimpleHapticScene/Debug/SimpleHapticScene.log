@@ -1,0 +1,12 @@
+﻿cl : command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  SimpleHapticScene.c
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(359,21): warning C4477: 'fprintf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'const HDdouble'
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(359,21): warning C4477: 'fprintf' : format string '%i' requires an argument of type 'int', but variadic argument 2 has type 'const HDdouble'
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(359,21): warning C4477: 'fprintf' : format string '%i' requires an argument of type 'int', but variadic argument 3 has type 'const HDdouble'
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(370,27): warning C4013: 'mapInterval' undefined; assuming extern returning int
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(396,9): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(585,26): warning C4133: 'function': incompatible types - from 'FILE *' to 'const char *const '
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(506,18): warning C4101: 'jointAngles': unreferenced local variable
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(505,18): warning C4101: 'position': unreferenced local variable
+C:\Users\vrp\source\repos\SimpleHapticScene\SimpleHapticScene.c(507,18): warning C4101: 'gimbalAngles': unreferenced local variable
+  SimpleHapticScene.vcxproj -> C:\Users\vrp\source\repos\SimpleHapticScene\Debug\SimpleHapticScene.exe
