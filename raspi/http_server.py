@@ -12,12 +12,13 @@ class VRHTTPServer(BaseHTTPRequestHandler):
         if (parse_qs(urlparse(self.path).query).get('command', None) != None):
             message = parse_qs(urlparse(self.path).query).get('command', None)[0]
             print("Message: " + message)
+            command = None
 
             if message == "neutral":
                 ser.write(b"neutral")
                 command = "neutral"
 
-            else:
+            elif message.startswith("m("):
                 params = message.split(",")
                 command = "m("
                 command += params[0]
@@ -37,14 +38,15 @@ class VRHTTPServer(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'application/json')
             self.end_headers()
 
-            
-            json_string = {'command' : command}
+            if command:
+                json_string = {'command' : command}
+                ser.write(bytes(command, 'utf-8'))
+                print(ser.readline())
+
+            else:
+                json_string = {'command' : 'invalid'}
 
             self.wfile.write(json.dumps(json_string).encode(encoding='utf-8'))
-            
-            ser.write(bytes(command, 'utf-8'))
-
-            print(ser.readline())
 
         return
 
