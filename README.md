@@ -13,4 +13,4 @@ Start the Server via:
 Additionally there is a WebSocket-Client that could also be used for the communication (including an HTML-Page that establishes a connection to the WebSocket)
 
 ## Win
-Visual Studio Project than connects to the Phantom Premium, reads its angles values, calculates the angles for the Braccio and sends an HTTP-Request to the RasPi.
+Visual Studio Project than connects to the Phantom Premium, reads its angles values, calculates the angles for the Braccio and sends an HTTP-Request to the RasPi. To start the application, the Visual Studio Project has to be openend and then the application can be run from it.
